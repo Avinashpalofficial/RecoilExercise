@@ -4,4 +4,7 @@ import {atom} from 'recoil';
     default: 0
  })
 
- export default countAtom;  
+// This atom will hold the count state and can be used across components
+
+export default  countAtom;
+
