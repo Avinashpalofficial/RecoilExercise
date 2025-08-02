@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import countContext from '../context';
+import { useRecoilValue } from 'recoil';
+import  countAtom  from '../store/atoms/count.jsx';
+import { RecoilRoot } from 'recoil';
 function CountRenderer() {
-      const { count } = useContext(countContext);
+      const count = useRecoilValue(countAtom);
     return (
         <div>
-         
+            
            <h2>Count: {count}</h2>
         </div>
     );

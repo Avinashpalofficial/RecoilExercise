@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import countContext from '../context';
+import { useRecoilValue } from 'recoil';
+import countAtom from '../store/atoms/count.jsx';
+import { useRecoilState } from 'recoil';
 function Button() {
-    const { count, setCount } = useContext(countContext);
+    const [count,setCount] = useRecoilState(countAtom);
     return (
         <div>
             <button onClick={() => setCount(count + 1)}>increase</button>
